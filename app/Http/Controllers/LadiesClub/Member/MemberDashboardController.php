@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Http;
+use App\Services\SMSService;
 
 class MemberDashboardController extends Controller
 {
@@ -209,7 +210,7 @@ class MemberDashboardController extends Controller
         // If a unique code is found, return it
         return $code;
     }
-    public function memberAttendEvent(Request $request, $id)
+    public function memberAttendEvent(Request $request, $id, SMSService $sms)
     {
         $request->validate([
             'selectedOption' => 'required|in:0,1',
@@ -222,17 +223,18 @@ class MemberDashboardController extends Controller
             $code = str_pad(rand(1, 9999), 4, '0', STR_PAD_LEFT);
             $message = "Your verification code is: {$code}. Please use this code to attend the event.";
             $phone = Auth::user()->phone;
-            $response = Http::post('https://gpcmp.grameenphone.com/ecmapigw/webresources/ecmapigw.v2', [
-                'username' => 'ITDAHQAdmin_3753',
-                'password' => 'ITdte@2020',
-                'apicode' => '1',
-                'countrycode' => '880',
-                'cli' => 'IT DTE',
-                'msisdn' => $phone,
-                'messagetype' => '1',
-                'message' => $message,
-                'messageid' => '0'
-            ]);
+//            $response = Http::post('https://gpcmp.grameenphone.com/ecmapigw/webresources/ecmapigw.v2', [
+//                'username' => 'ITDAHQAdmin_3753',
+//                'password' => 'ITdte@2020',
+//                'apicode' => '1',
+//                'countrycode' => '880',
+//                'cli' => 'IT DTE',
+//                'msisdn' => $phone,
+//                'messagetype' => '1',
+//                'message' => $message,
+//                'messageid' => '0'
+//            ]);
+            $sms->sendSMS($phone, $message);
             if ($response->successful()) {
                 \Log::info('SMS sent successfully', ['to' => $phone]);
             } else {

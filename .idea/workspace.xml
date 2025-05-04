@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54231a67-d6a7-418b-b28b-b79f979943e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/ladiesClub/sms/inPersonSms.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/SMSService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LadiesClub/Member/MemberDashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LadiesClub/Member/MemberDashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LadiesClub/SendEventSmsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LadiesClub/SendEventSmsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/SendSmsJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/SendSmsJob.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/2fa.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/2fa.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ladiesClub/eventAttendedMemberList/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ladiesClub/eventAttendedMemberList/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ladiesClub/layout/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ladiesClub/layout/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ladiesClub/memberListWithCode/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ladiesClub/memberListWithCode/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ladiesClub/partials/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ladiesClub/partials/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/ladiesClub/sms/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ladiesClub/sms/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/partials/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/partials/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/backend.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/backend.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,6 +242,8 @@
       <workItem from="1746335112656" duration="1095000" />
       <workItem from="1746340122672" duration="1005000" />
       <workItem from="1746344498550" duration="2659000" />
+      <workItem from="1746351359193" duration="196000" />
+      <workItem from="1746351568694" duration="1438000" />
     </task>
     <servers />
   </component>
@@ -262,10 +255,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="452" y="94" key="#Log_Highlighting_(ideolog)/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1744271193755" />
-    <state x="627" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1746349305029">
+    <state x="627" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1746352731543">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="627" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1746349305029" />
+    <state x="627" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1746352731543" />
     <state x="690" y="217" key="FileChooserDialogImpl" timestamp="1745984678172">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -282,9 +275,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="741" height="498" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1744696334482" />
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1746347297219">
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1746351573250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1746347297219" />
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1746351573250" />
   </component>
 </project>

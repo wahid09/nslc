@@ -10,6 +10,7 @@ use Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Http;
 use App\Jobs\SendSmsJob;
+use App\Services\SMSService;
 
 class SendEventSmsController extends Controller
 {
@@ -83,23 +84,13 @@ class SendEventSmsController extends Controller
     public function inPersonSMS(){
         return view('ladiesClub.sms.inPersonSms');
     }
-    public function inPersonSMSSend(Request $request){
+    public function inPersonSMSSend(Request $request, SMSService $sms){
         $request->validate([
             'message' => 'required|string',
             'phone_number' => 'required'
         ]);
         $plainTextMessage = strip_tags($request->get('message'));
-        $response = Http::post('https://gpcmp.grameenphone.com/ecmapigw/webresources/ecmapigw.v2', [
-            'username' => 'ITDAHQAdmin_3753',
-            'password' => 'ITdte@2020',
-            'apicode' => '1',
-            'cli' => 'IT DTE',
-            'countrycode' => '880',
-            'msisdn' => $request->get('phone_number'),
-            'messagetype' => '1',
-            'message' => $plainTextMessage,
-            'messageid' => '0'
-        ]);
+        $sms->sendSMS($request->get('phone_number'), $plainTextMessage);
         notify()->success("SMS send successfully", "Success");
         return redirect()->back();
     }
