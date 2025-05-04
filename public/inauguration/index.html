@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SLC</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="rxWorld">
+
+<section class="rnOuter ">
+       
+  <section class="aoTable">
+    <iframe src="https://slc.itdte.net" style="width: 100%;height: 100vh; border:0px;"></iframe>
+</section>
+    <div class="welcome-text">
+      <img src="bow.png">
+      <h1 style="color: #fff;">
+        <span>স্বাগতম</span> <br>
+সম্মানিত পৃষ্ঠপোষক, সেপকস এবং প্রধান পৃষ্ঠপোষক, লেডিস ক্লাব ও চিলড্রেন ক্লাব <br> কর্তৃক <br> সেপকস, লেডিস ক্লাব এবং চিলড্রেন ক্লাব ওয়েবসাইটের শুভ উদ্বোধন
+      </h1>
+      <a class="button">উদ্বোধন</a>
+    </div>
+    <div class='rnInner'>
+        <div class='rnUnit'></div><!--
+        --><div class='rnUnit'></div><!--
+        --><div class='rnUnit'></div><!--
+        --><div class='rnUnit'></div><!--
+        --><div class='rnUnit'></div><!--
+        --><div class='rnUnit'></div><!--
+        --><div class='rnUnit'></div><!--
+        --><div class='rnUnit'></div><!--
+        --><div class='rnUnit'></div><!--
+        --><div class='rnUnit'></div><!--
+        -->
+    </div>
+    <div class='rnonner'>
+        <div class='re rnUnit'></div><!--
+        --><div class='re rnUnit'></div><!--
+        --><div class='re rnUnit'></div><!--
+        --><div class='re rnUnit'></div><!--
+        --><div class='re rnUnit'></div><!--
+        --><div class='re rnUnit'></div><!--
+        --><div class='re rnUnit'></div><!--
+        --><div class='re rnUnit'></div><!--
+        --><div class='re rnUnit'></div><!--
+        --><div class='re rnUnit'></div><!--
+        -->
+    </div>
+</section>
+    
+     
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<script type="text/javascript">
+    $( ".button" ).click(function() {
+      $(".rnInner").css("transform-origin", "-120% top");
+      $(".rnInner").css("transform", "scaleX(0)");
+      $(".rnonner").css("transform-origin", "120% top");
+      $(".rnonner").css("transform", "scaleX(0)");
+      // $(".welcome-text").css("opacity", "0");
+      $(".welcome-text").hide();
+    });
+</script>
+
+</body>
+</html>
