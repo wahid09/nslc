@@ -80,12 +80,12 @@
                 <form method="POST" action="{{ route('2fa.post') }}">
                         @csrf
 
-                        <p class="text-center text-light">We sent code to email
-                            : <b>
+                        <p class="text-center text-light"><b>
                                 {{-- @if(!empty(auth()->user()->email))
                                     {{ auth()->user()->email }}
                                 @endif --}}
-                                {{ substr(auth()->user()->email, 0, 5) . '******' . substr(auth()->user()->email,  -10) }}
+{{--                                {{ substr(auth()->user()->email, 0, 5) . '******' . substr(auth()->user()->email,  -10) }}--}}
+                                <strong> If you log in using your email address, the login code will be sent to your registered email. If you log in using your membership number, the code will be sent to your registered mobile number.</strong>
                             </b></p>
 
                         @if ($message = Session::get('success'))

@@ -15,13 +15,14 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('main.css') }}" rel="stylesheet" nonce="abc123">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" nonce="abc123">
-    <link href="{{ asset('css/iziToast.css') }}" rel="stylesheet" nonce="abc123">
-    <link href="{{asset('assets/dropify/dropify.min.css')}}" rel="stylesheet" nonce="abc123">
-    <link href="{{asset('assets/select/select2.min.css')}}" rel="stylesheet" nonce="abc123">
-    <link href="{{asset('assets/summernote/summernote-bs4.min.css')}}" rel="stylesheet" nonce="abc123">
-    <style nonce="abc123">
+    <link href="{{ asset('main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/iziToast.css') }}" rel="stylesheet">
+    <link href="{{asset('assets/dropify/dropify.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/select/select2.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/summernote/summernote-bs4.min.css')}}" rel="stylesheet">
+    <link href="{{asset('DataTables/datatables.min.css')}}" rel="stylesheet">
+    <style>
         .vertical-nav-menu ul > li > a {
             color: #6c757d;
             height: 2rem;
@@ -52,12 +53,28 @@
         .ck-editor__editable {
             min-height: 200px;
         }
+        .flex-wrap {
+            flex-wrap: wrap !important;
+            float: left;
+        }
+        .dt-search{
+            flex-wrap: wrap !important;
+            float: right;
+        }
+        div.dt-container div.dt-info {
+            white-space: nowrap;
+            float: left;
+        }
+        div.dt-container div.dt-paging {
+            margin: 0;
+            float: right;
+        }
 
     </style>
     @stack('css')
     {{--    <meta http-equiv="Content-Security-Policy"--}}
     {{--          content="script-src 'self' cdn.datatables.net cdnjs.cloudflare.com code.jquery.com stackpath.bootstrapcdn.com 'unsafe-inline';">--}}
-        <?php header('X-Frame-Options: DENY'); ?>
+        <?php //header('X-Frame-Options: DENY'); ?>
 </head>
 <body>
 <div id="app">
@@ -82,26 +99,27 @@
 <script src="{{ asset('js/iziToast.js') }}"></script>
 <script src="{{ asset('js/script.js') }}"></script>
 <script src="{{ asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{asset('backend/plugins/datatables/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('backend/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
-<script src="{{asset('backend/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
-<script src="{{asset('backend/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
-<script src="{{asset('backend/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
-<script src="{{asset('backend/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
+{{--<script src="{{asset('backend/plugins/datatables/jquery.dataTables.min.js')}}"></script>--}}
+{{--<script src="{{asset('backend/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>--}}
+{{--<script src="{{asset('backend/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>--}}
+{{--<script src="{{asset('backend/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>--}}
+{{--<script src="{{asset('backend/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>--}}
+{{--<script src="{{asset('backend/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>--}}
 
-<script src="{{asset('backend/plugins/jszip/jszip.min.js')}}"></script>
-<script src="{{asset('backend/plugins/pdfmake/pdfmake.min.js')}}"></script>
-<script src="{{asset('backend/plugins/pdfmake/vfs_fonts.js')}}"></script>
-<script src="{{asset('backend/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
-<script src="{{asset('backend/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
-<script src="{{asset('backend/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
+{{--<script src="{{asset('backend/plugins/jszip/jszip.min.js')}}"></script>--}}
+{{--<script src="{{asset('backend/plugins/pdfmake/pdfmake.min.js')}}"></script>--}}
+{{--<script src="{{asset('backend/plugins/pdfmake/vfs_fonts.js')}}"></script>--}}
+{{--<script src="{{asset('backend/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>--}}
+{{--<script src="{{asset('backend/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>--}}
+{{--<script src="{{asset('backend/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>--}}
+<script src="{{asset('DataTables/datatables.min.js')}}"></script>
 <script src="{{asset('assets/select/select2.min.js')}}"></script>
 <script src="{{asset('assets/dropify/dropify.min.js')}}"></script>
 <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{asset('assets/summernote/summernote-bs4.min.js')}}"></script>
 <script src="{{asset('editor/tinymc.js')}}"></script>
 
-<script type="text/javascript" nonce="abc123">
+<script type="text/javascript">
     $(document).ready(function() {
         $('#summernote').summernote({
             toolbar: [

@@ -2,13 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54231a67-d6a7-418b-b28b-b79f979943e0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Services/SMSService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/chart/chart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LadiesClub/Member/MemberDashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LadiesClub/Member/MemberDashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LadiesClub/SendEventSmsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LadiesClub/SendEventSmsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Jobs/SendSmsJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/SendSmsJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LadiesClub/MemberRegistration.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LadiesClub/MemberRegistration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TwoFAController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TwoFAController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backend/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/2fa.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/2fa.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/education/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/education/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/gallery/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/gallery/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/leaders/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/leaders/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/product/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/showroomes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/showroomes/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/training/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/training/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/welfare/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/welfare/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ladiesClub/idCard/idCardFront.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ladiesClub/idCard/idCardFront.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ladiesClub/member/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ladiesClub/member/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ladiesClub/member/memberView.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ladiesClub/member/memberView.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ladiesClub/memberListWithCode/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ladiesClub/memberListWithCode/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/frontend/partials/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/frontend/partials/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/backend.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/backend.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +263,15 @@
       <workItem from="1746340122672" duration="1005000" />
       <workItem from="1746344498550" duration="2659000" />
       <workItem from="1746351359193" duration="196000" />
-      <workItem from="1746351568694" duration="1438000" />
+      <workItem from="1746351568694" duration="3969000" />
+      <workItem from="1746363907439" duration="265000" />
+      <workItem from="1746414202444" duration="3071000" />
+      <workItem from="1746419286315" duration="106000" />
+      <workItem from="1746420440299" duration="32000" />
+      <workItem from="1746421511506" duration="3060000" />
+      <workItem from="1746424792104" duration="1074000" />
+      <workItem from="1746427130344" duration="1205000" />
+      <workItem from="1746432750654" duration="488000" />
     </task>
     <servers />
   </component>
@@ -259,10 +287,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="627" y="217" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1746352731543" />
-    <state x="690" y="217" key="FileChooserDialogImpl" timestamp="1745984678172">
+    <state x="690" y="217" key="FileChooserDialogImpl" timestamp="1746364058010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="217" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1745984678172" />
+    <state x="690" y="217" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1746364058010" />
     <state x="751" y="426" key="NewPhpFileDialog" timestamp="1744534185825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -275,9 +303,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="741" height="498" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1744696334482" />
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1746351573250">
+    <state x="-1345" y="295" width="770" height="450" key="XPathView.FindDialog.DIMENSION_SERVICE_KEY.SIMPLE" timestamp="1746427474244">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1345" y="295" width="770" height="450" key="XPathView.FindDialog.DIMENSION_SERVICE_KEY.SIMPLE/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1746427474244" />
+    <state x="575" y="295" width="770" height="450" key="XPathView.FindDialog.DIMENSION_SERVICE_KEY.SIMPLE/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1746427231428" />
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1746432750924">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1746351573250" />
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1746432750924" />
+    <state x="566" y="179" width="787" height="682" key="find.popup" timestamp="1746364114235">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="566" y="179" width="787" height="682" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1746364114235" />
+    <state x="532" y="237" key="run.anything.popup" timestamp="1746424087121">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="532" y="237" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1746424087121" />
+  </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history>
+      <element expression="y Validation" />
+      <element expression="Validation" />
+      <element expression="Javascript_Libraries_Audit.script" />
+    </find-history>
   </component>
 </project>

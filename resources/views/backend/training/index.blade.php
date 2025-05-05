@@ -47,9 +47,9 @@
                             <tr>
                                 <td class="text-center text-muted">{{ $loop->index+1 }}</td>
                                 <td class="text-center">{{ $trainning->title_bn }}</td>
-                                <td class="text-center">{{ $trainning->club->name_bn }}</td>
-                                <td class="text-center">{{ $trainning->area->name_bn }}</td>
-                                <td class="text-center">{{ $trainning->trainingCat->name_bn }}</td>
+                                <td class="text-center">{{ $trainning->club?->name_bn }}</td>
+                                <td class="text-center">{{ $trainning->area?->name_bn }}</td>
+                                <td class="text-center">{{ $trainning->trainingCat?->name_bn }}</td>
                                 <td class="text-center"><img src="{{ asset('storage/training/'.$trainning->image) }}"
                                                              style="width: 80px; height:40px;"></td>
                                 <td class="text-center">{{ $trainning->training_date }}</td>

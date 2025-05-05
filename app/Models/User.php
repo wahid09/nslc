@@ -123,6 +123,9 @@ class User extends Authenticatable
             ['code' => $code]
         );
         $phone = User::select('phone')->where('id', auth()->user()->id)->first();
+        if (!$phone) {
+            return false;
+        }
         $message = 'Your Login Code is: '.$code;
         $response = Http::post('https://gpcmp.grameenphone.com/ecmapigw/webresources/ecmapigw.v2', [
             'username' => 'ITDAHQAdmin_3753',

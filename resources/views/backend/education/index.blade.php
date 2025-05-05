@@ -41,8 +41,11 @@
                         @foreach ($educations as $education)
                             <tr>
                                 <td class="text-center text-muted">{{ $loop->index+1 }}</td>
-                                <td class="text-center">{{ $education->club->name_bn }}</td>
-                                <td class="text-center">{{ $education->area->name_bn }}</td>
+{{--                                <td class="text-center">{{ $education->club->name_bn }}</td>--}}
+{{--                                <td class="text-center">{{ $education->area->name_bn }}</td>--}}
+                                <td class="text-center">{{ optional($education->club)->name_bn ?? 'N/A' }}</td>
+                                <td class="text-center">{{ optional($education->area)->name_bn ?? 'N/A' }}</td>
+
                                 <td class="text-center">
                                     @if($education->status == true)
                                         <span class="badge badge-info">Active</span>

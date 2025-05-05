@@ -114,6 +114,8 @@ Route::post('/members-data', [\App\Http\Controllers\LadiesClub\MemberRegistratio
 Route::get('/member-view/{id}', [\App\Http\Controllers\LadiesClub\MemberRegistration::class, 'MemberView'])->name('member.view');
 Route::post('/update-id-card-no/{id}', [\App\Http\Controllers\LadiesClub\MemberRegistration::class, 'idCardNoUpdate'])->name('member.idCardNoUpdate');
 Route::post('/update-member-pass/{id}', [\App\Http\Controllers\LadiesClub\MemberRegistration::class, 'updateMemberPassword'])->name('member.updateMemberPassword');
+Route::post('/update-member-image/{id}', [\App\Http\Controllers\LadiesClub\MemberRegistration::class, 'updateMemberImage'])->name('member.updateMemberImage');
+Route::post('/update-member-sig/{id}', [\App\Http\Controllers\LadiesClub\MemberRegistration::class, 'updateMemberSignature'])->name('member.updateMemberSignature');
 Route::get('admin-pay-management', [\App\Http\Controllers\LadiesClub\Backend\MemberPaymentManagementController::class, 'index'])->name('pay.index');
 Route::get('pay-update/{id}', [\App\Http\Controllers\LadiesClub\Backend\MemberPaymentManagementController::class, 'paymentUpdate'])->name('pay.paymentUpdate');
 Route::get('/device', [\App\Http\Controllers\LadiesClub\Backend\DeviceController::class, 'index'])->name('device.index');

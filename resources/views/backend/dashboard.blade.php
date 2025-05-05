@@ -118,8 +118,10 @@
                                 <tr>
                                     <td class="text-center text-muted">{{$loop->index+1}}</td>
                                     <td>{{$user->name_bn ? $user->name_bn : $user->username}}</td>
-                                    <td class="text-center">{{$user->club->name_bn}}</td>
-                                    <td class="text-center">{{$user->area->name_bn}}</td>
+{{--                                    <td class="text-center">{{$user->club->name_bn}}</td>--}}
+{{--                                    <td class="text-center">{{$user->area->name_bn}}</td>--}}
+                                    <td class="text-center">{{ optional($user->club)->name_bn ?? 'N/A' }}</td>
+                                    <td class="text-center">{{ optional($user->area)->name_bn ?? 'N/A' }}</td>
                                     <td class="text-center">Online
                                     </td>
                                 </tr>

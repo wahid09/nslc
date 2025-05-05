@@ -44,8 +44,10 @@
                             <tr>
                                 <td class="text-center text-muted">{{ $loop->index+1 }}</td>
                                 <td class="text-center">{{ $product->title_bn }}</td>
-                                <td class="text-center">{{ $product->category->name_bn }}</td>
-                                <td class="text-center">{{ $product->area->name_bn }}</td>
+{{--                                <td class="text-center">{{ $product->category->name_bn }}</td>--}}
+{{--                                <td class="text-center">{{ $product->area->name_bn }}</td>--}}
+                                <td class="text-center">{{ optional($product->category)->name_bn ?? 'N/A' }}</td>
+                                <td class="text-center">{{ optional($product->area)->name_bn ?? 'N/A' }}</td>
                                 <td class="text-center"><img src="{{ asset('storage/products/'.$product->image) }}" style="width: 80px; height:40px;"></td>
 
                                 <td class="text-center">

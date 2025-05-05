@@ -320,7 +320,8 @@
     </div>
 
     <div class="member-deg">
-        <p>{{ $clubDesignation->name ? $clubDesignation->name : '' }}</p>
+{{--        <p>{{ $clubDesignation->name ? $clubDesignation->name : '' }}</p>--}}
+        <p>{{ $clubDesignation->name ?? '' }}</p>
     </div>
 
     <div class="husband-name-start">

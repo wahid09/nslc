@@ -48,8 +48,13 @@ class TwoFAController extends Controller
      */
     public function resend()
     {
-        auth()->user()->generateCode();
+        $phone = auth()->user()->phone;
+        if(!$phone){
+            auth()->user()->generateCode();
+        }else{
+            auth()->user()->loginWithSmsOtp();
+        }
 
-        return back()->with('success', 'We sent you code on your email.');
+        return back()->with('success', 'We sent you code on your Email/Mobile Number.');
     }
 }

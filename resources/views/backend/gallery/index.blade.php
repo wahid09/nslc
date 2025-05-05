@@ -46,8 +46,10 @@
                                 <td>{{ $gallery->title_bn }}</td>
                                 <td class="text-center"><img src="{{ asset('storage/gallery/'.$gallery->image) }}"
                                                              style="width: 80px; height:40px;"></td>
-                                <td class="text-center">{{ $gallery->club->name_bn }}</td>
-                                <td class="text-center">{{ $gallery->area->name_bn }}</td>
+{{--                                <td class="text-center">{{ $gallery->club->name_bn }}</td>--}}
+{{--                                <td class="text-center">{{ $gallery->area->name_bn }}</td>--}}
+                                <td class="text-center">{{ optional($gallery->club)->name_bn ?? 'N/A' }}</td>
+                                <td class="text-center">{{ optional($gallery->area)->name_bn ?? 'N/A' }}</td>
                                 <td class="text-center">
                                     @if($gallery->status == true)
                                         <span class="badge badge-info">Active</span>

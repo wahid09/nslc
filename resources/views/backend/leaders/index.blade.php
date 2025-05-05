@@ -46,16 +46,19 @@
                                 <td class="text-center text-muted">{{ $loop->index+1 }}</td>
                                 <td class="text-center">{{ $leader->name_bn }}</td>
                                 <td class="text-center">
-@if(!empty($leader->appointment->name_bn))
-{{ $leader->appointment->name_bn }}
-@endif
-</td>
-                                <td class="text-center"><img src="{{ asset('storage/leader/'.$leader->image) }}" style="width: 80px; height:40px;"></td>
-                                <td class="text-center">{{ $leader->club->name_bn }}</td>
-                                <td class="text-center">
-
-                                    {{ $leader->areaName->name_bn }}
+                                    @if(!empty($leader->appointment->name_bn))
+                                        {{ $leader->appointment->name_bn }}
+                                    @endif
                                 </td>
+                                <td class="text-center"><img src="{{ asset('storage/leader/'.$leader->image) }}"
+                                                             style="width: 80px; height:40px;"></td>
+{{--                                <td class="text-center">{{ $leader->club->name_bn }}</td>--}}
+{{--                                <td class="text-center">--}}
+
+{{--                                    {{ $leader->areaName->name_bn }}--}}
+{{--                                </td>--}}
+                                <td class="text-center">{{ optional($leader->club)->name_bn ?? 'N/A' }}</td>
+                                <td class="text-center">{{ optional($leader->areaName)->name_bn ?? 'N/A' }}</td>
                                 <td class="text-center">
                                     @if($leader->status == true)
                                         <span class="badge badge-info">Active</span>
@@ -65,11 +68,14 @@
                                 </td>
                                 <td class="text-center">
                                     @permission('leader-update')
-                                    <a href="{{ route('app.leader.edit', $leader->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                    <a href="{{ route('app.leader.edit', $leader->id)}}" class="btn btn-primary"><i
+                                            class="fas fa-edit"></i></a>
                                     @endpermission
                                     @permission('leader-delete')
-                                    <button onclick="deleteData({{$leader->id}})" type="button" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                    <form id="delete-{{$leader->id}}" method="POST" action="{{ route('app.leader.destroy', $leader->id) }}" style="display:none;">
+                                    <button onclick="deleteData({{$leader->id}})" type="button" class="btn btn-danger">
+                                        <i class="fas fa-trash"></i></button>
+                                    <form id="delete-{{$leader->id}}" method="POST"
+                                          action="{{ route('app.leader.destroy', $leader->id) }}" style="display:none;">
                                         @csrf
                                         @method('DELETE')
                                     </form>

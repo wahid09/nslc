@@ -46,11 +46,13 @@
                             <tr>
                                 <td class="text-center text-muted">{{ $loop->index+1 }}</td>
                                 <td>{{ $welfare->title_bn }}</td>
-                                <td class="text-center">{{ $welfare->club->name_bn }}</td>
+{{--                                <td class="text-center">{{ $welfare->club->name_bn }}</td>--}}
+                                <td class="text-center">{{ optional($welfare->club)->name_bn ?? 'N/A' }}</td>
                                 <td class="text-center"><img src="{{ asset('storage/welfare/'.$welfare->image) }}" style="width: 80px; height:40px;"></td>
-                                <td class="text-center">
-                                    {{$welfare->area->name_bn}}
-                                </td>
+{{--                                <td class="text-center">--}}
+{{--                                    {{$welfare->area->name_bn}}--}}
+{{--                                </td>--}}
+                                <td class="text-center">{{ optional($welfare->area)->name_bn ?? 'N/A' }}</td>
                                 <td class="text-center">
                                     @if($welfare->status == true)
                                         <span class="badge badge-info">Active</span>

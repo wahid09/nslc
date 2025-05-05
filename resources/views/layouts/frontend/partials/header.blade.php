@@ -166,7 +166,7 @@
                         </li>
                     @endauth
                     <li>
-                        <img class="bb100" src="{{asset('frontend/assets/images/bb100.png')}}">
+{{--                        <img class="bb100" src="{{asset('frontend/assets/images/bb100.png')}}">--}}
                     </li>
                 </ul>
 

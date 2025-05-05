@@ -36,6 +36,7 @@ class MemberRegistration extends Controller
         Gate::authorize('lcm-index');
         return view('ladiesClub.registration.index');
     }
+
     public function getMembersData(Request $request)
     {
         if ($request->ajax()) {
@@ -94,9 +95,9 @@ class MemberRegistration extends Controller
                     return $row->user_status ? '<span class="badge badge-info">Active</span>' : '<span class="badge badge-warning">Inactive</span>';
                 })
                 ->addColumn('actions', function ($row) {
-                    $viewBtn = '<a href="'.route('app.member.view', $row->user_id).'" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></a>';
-                    $assignBtn = '<a href="'.route('app.user.assignDeviceForm', $row->user_id).'" class="btn btn-primary btn-sm"><i class="fa fa-tablet"></i></a>';
-                    $editBtn = '<a href="'.route('app.member-registration.edit', $row->user_id).'" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>';
+                    $viewBtn = '<a href="' . route('app.member.view', $row->user_id) . '" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></a>';
+                    $assignBtn = '<a href="' . route('app.user.assignDeviceForm', $row->user_id) . '" class="btn btn-primary btn-sm"><i class="fa fa-tablet"></i></a>';
+                    $editBtn = '<a href="' . route('app.member-registration.edit', $row->user_id) . '" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>';
                     $deleteBtn = '<button type="button" data-id="' . $row->user_id . '" class="btn btn-danger btn-sm delete-member" title="delete member"><i class="fas fa-trash"></i></button>';
                     return $viewBtn . ' ' . $assignBtn . ' ' . $editBtn . ' ' . $deleteBtn;
                 })
@@ -188,24 +189,24 @@ class MemberRegistration extends Controller
                 'is_ladies_club_member' => 1
             ]);
             //Member Pamyment calculation
-            if(!empty($request->get('rank_id'))){
-                if($request->get('rank_id') >= 9){
+            if (!empty($request->get('rank_id'))) {
+                if ($request->get('rank_id') >= 9) {
                     $monthlyPayAmount = '250';
                 }
-                if($request->get('rank_id') == 8){
+                if ($request->get('rank_id') == 8) {
                     $monthlyPayAmount = '300';
                 }
-                if($request->get('rank_id') == 7){
+                if ($request->get('rank_id') == 7) {
                     $monthlyPayAmount = '350';
                 }
-                if($request->get('rank_id') == 6){
+                if ($request->get('rank_id') == 6) {
                     $monthlyPayAmount = '450';
                 }
-                if($request->get('rank_id') <= 5){
+                if ($request->get('rank_id') <= 5) {
                     $monthlyPayAmount = '500';
                 }
 
-            }else{
+            } else {
                 $monthlyPayAmount = null;
             }
             $payAmount = \DB::table('member_monthly_payable_amounts')
@@ -265,6 +266,58 @@ class MemberRegistration extends Controller
                 ->withInput();
         }
     }
+
+    public function updateMemberImage(Request $request, $id)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+        ]);
+
+        try {
+            // Process image
+            $userImage = null;
+            if ($request->hasFile('image')) {
+                $userImage = makeImage($request->file('image'), $request->name ?? 'member', 'memberImage', 300, 300);
+            }
+
+            // Update DB
+            DB::table('user_images')->updateOrInsert(
+                ['user_id' => $id],
+                ['member_image' => $userImage]
+            );
+            DB::table('users')->where('id', $id)->update([
+                'image' => $userImage
+            ]);
+            return response()->json(['message' => 'Member image updated successfully.'], 200);
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'An error occurred: ' . $e->getMessage()], 500);
+        }
+    }
+
+    public function updateMemberSignature(Request $request, $id)
+    {
+        $request->validate([
+            'signature' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+        ]);
+
+        try {
+            // Process image
+            $userImage = null;
+            if ($request->hasFile('signature')) {
+                $userImage = makeImage($request->file('signature'), $request->name ?? 'member', 'memberSignature', 300, 80);
+            }
+
+            // Update DB
+            DB::table('user_images')->updateOrInsert(
+                ['user_id' => $id],
+                ['member_signature' => $userImage]
+            );
+            return response()->json(['message' => 'Member Signature updated successfully.'], 200);
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'An error occurred: ' . $e->getMessage()], 500);
+        }
+    }
+
 
     /**
      * Display the specified resource.
@@ -532,24 +585,24 @@ class MemberRegistration extends Controller
                 'is_active' => 1
             ]);
             //Member Pamyment calculation
-            if(!empty($request->get('rank_id'))){
-                if($request->get('rank_id') >= 9){
+            if (!empty($request->get('rank_id'))) {
+                if ($request->get('rank_id') >= 9) {
                     $monthlyPayAmount = '250';
                 }
-                if($request->get('rank_id') == 8){
+                if ($request->get('rank_id') == 8) {
                     $monthlyPayAmount = '300';
                 }
-                if($request->get('rank_id') == 7){
+                if ($request->get('rank_id') == 7) {
                     $monthlyPayAmount = '350';
                 }
-                if($request->get('rank_id') == 6){
+                if ($request->get('rank_id') == 6) {
                     $monthlyPayAmount = '450';
                 }
-                if($request->get('rank_id') <= 5){
+                if ($request->get('rank_id') <= 5) {
                     $monthlyPayAmount = '500';
                 }
 
-            }else{
+            } else {
                 $monthlyPayAmount = null;
             }
             $payAmount = \DB::table('member_monthly_payable_amounts')

@@ -1,11 +1,23 @@
 @extends('layouts.backend.app')
 @push('css')
-    <style>
-        .flex-wrap {
-            flex-wrap: wrap !important;
-            float: left;
-        }
-    </style>
+{{--    <style>--}}
+{{--        .flex-wrap {--}}
+{{--            flex-wrap: wrap !important;--}}
+{{--            float: left;--}}
+{{--        }--}}
+{{--        .dt-search{--}}
+{{--            flex-wrap: wrap !important;--}}
+{{--            float: right;--}}
+{{--        }--}}
+{{--        div.dt-container div.dt-info {--}}
+{{--            white-space: nowrap;--}}
+{{--            float: left;--}}
+{{--        }--}}
+{{--        div.dt-container div.dt-paging {--}}
+{{--            margin: 0;--}}
+{{--            float: right;--}}
+{{--        }--}}
+{{--    </style>--}}
 @endpush
 
 @section('content')

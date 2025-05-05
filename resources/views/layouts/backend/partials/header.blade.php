@@ -1,4 +1,4 @@
-<style nonce="abc123">
+<style>
     .logo-src {
         height: 50px;
         width: 50px;
@@ -14,7 +14,8 @@
 <div class="app-header header-shadow">
     <div class="app-header__logo">
         <div class="head-text mt-2">
-            <p>{{authuser()->club_name}} - {{authuser()->area_name}}</p>
+            {{--            <p>{{authuser()->club_name}} - {{authuser()->area_name}}</p>--}}
+            <p>{{ optional(authuser())->club_name ?? 'N/A' }} - {{ optional(authuser())->area_name ?? 'N/A' }}</p>
         </div>
         <div class="header__pane ml-auto">
             <div>

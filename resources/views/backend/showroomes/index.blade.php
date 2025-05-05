@@ -47,7 +47,8 @@
                                 <td class="text-center">{{ $showroome->title }}</td>
                                 <td class="text-center">{{ $showroome->house }}</td>
                                 <td class="text-center">{{ $showroome->road }}</td>
-                                <td class="text-center">{{ $showroome->areaName->name_bn }}</td>
+{{--                                <td class="text-center">{{ $showroome->areaName->name_bn }}</td>--}}
+                                <td class="text-center">{{ optional($showroome->areaName)->name_bn ?? 'N/A' }}</td>
                                 <td class="text-center">{{ $showroome->phone }}</td>
                                 <td class="text-center">
                                     @if($showroome->status == true)
