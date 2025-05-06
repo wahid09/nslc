@@ -3,10 +3,10 @@
 @section('title', 'Payment History')
 
 @push('css')
-{{--    <link rel="stylesheet" type="text/css" href="{{ asset('assets/ladiesclub/backend/css/select2.css') }}">--}}
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/ladiesclub/backend/css/datatables.css') }}">
+
+{{--    <link rel="stylesheet" type="text/css" href="{{ asset('assets/ladiesclub/backend/css/datatables.css') }}">--}}
+<link href="{{asset('DataTables/datatables.min.css')}}" rel="stylesheet">
     <style>
-{{--    <style nonce="{{ csp_nonce() }}">--}}
         .css1 {
             width: 100%;
         }
@@ -30,7 +30,8 @@
         @else
             <div class="row justify-content-center mb-3">
                 <div class="col-md-12">
-                    <a href="{{route('app.member.payBill')}}" class="btn btn-lg btn-block btn-danger" class="css1">Pay your
+                    <a href="{{route('app.member.payBill')}}" class="btn btn-lg btn-block btn-danger" class="css1">Pay
+                        your
                         monthly payment</a>
                 </div>
             </div>
@@ -42,14 +43,14 @@
                         <h5>Payment History</h5>
                     </div>
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="display" id="basic-1">
+                        <div class="table table-responsive">
+                            <table class="display" id="dataTable">
                                 <thead>
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Payment Date</th>
                                     <th scope="col">Amount</th>
-{{--                                    <th scope="col">reference NO</th>--}}
+                                    {{--                                    <th scope="col">reference NO</th>--}}
                                     <th scope="col">Payment Status</th>
                                 </tr>
                                 </thead>
@@ -60,11 +61,11 @@
                                         <td>{{ \Illuminate\Support\Carbon::parse($data->created_at)->format('M d, Y') }}
                                         </td>
                                         <td>{{ $data->pay_amount }}</td>
-{{--                                        <td>{{ $data->ref_no }}</td>--}}
+                                        {{--                                        <td>{{ $data->ref_no }}</td>--}}
                                         <td>
                                             @if($data->payment_is_verified == 1)
-                                            <span class="right badge badge-success float-right">Verified</span>
-                                                @else
+                                                <span class="right badge badge-success float-right">Verified</span>
+                                            @else
                                                 <span class="right badge badge-warning float-right">Pending</span>
                                             @endif
                                         </td>
@@ -82,10 +83,10 @@
 @endsection
 
 @push('js')
-    <script src="{{ asset('assets/ladiesclub/backend/js/datatable/datatables/plugin/datatables.min.js') }}"></script>
+    <script src="{{asset('DataTables/datatables.min.js')}}"></script>
     <script nonce="YKXiTcrg6o4DuumXQDxYRv9gHPlZng6z">
-        $(document).ready(function() {
-            $('#basic-1').DataTable();
+        $(document).ready(function () {
+            $('#dataTable').DataTable();
         });
     </script>
 @endpush

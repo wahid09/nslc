@@ -231,9 +231,9 @@
 @endsection
 
 @push('js')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-    </script>
-    <script src="https://merchant-pg-ui-prod.tadlbd.com/script.js"></script>
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">--}}
+{{--    </script>--}}
+{{--    <script src="https://merchant-pg-ui-prod.tadlbd.com/script.js"></script>--}}
     <script>
         {{--    <script nonce="{{ csp_nonce() }}">--}}
         {{--        $(document).ready(function() {--}}

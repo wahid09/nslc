@@ -16,7 +16,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+{{--    <link href="{{ asset('admin.css') }}" rel="stylesheet">--}}
+{{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
     <link href="{{ asset('css/iziToast.css') }}" rel="stylesheet">
     <link href="{{asset('assets/dropify/dropify.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/select/select2.min.css')}}" rel="stylesheet">
@@ -94,11 +95,17 @@
 </div>
 
 <!-- Scripts -->
-<script src="{{ asset('assets/scripts/main.js') }}"></script>
-<script src="{{ asset('js/app.js') }}"></script>
+{{--<script src="{{ asset('assets/scripts/main.js') }}"></script>--}}
+{{--<script src="{{ asset('admin.js') }}"></script>--}}
+<!-- jQuery (must come first) -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+{{--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>--}}
+<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+{{--<script src="{{ asset('js/app.js') }}"></script>--}}
 <script src="{{ asset('js/iziToast.js') }}"></script>
 <script src="{{ asset('js/script.js') }}"></script>
-<script src="{{ asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+{{--<script src="{{ asset('backend/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>--}}
 {{--<script src="{{asset('backend/plugins/datatables/jquery.dataTables.min.js')}}"></script>--}}
 {{--<script src="{{asset('backend/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>--}}
 {{--<script src="{{asset('backend/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>--}}
@@ -115,7 +122,7 @@
 <script src="{{asset('DataTables/datatables.min.js')}}"></script>
 <script src="{{asset('assets/select/select2.min.js')}}"></script>
 <script src="{{asset('assets/dropify/dropify.min.js')}}"></script>
-<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+{{--<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>--}}
 <script src="{{asset('assets/summernote/summernote-bs4.min.js')}}"></script>
 <script src="{{asset('editor/tinymc.js')}}"></script>
 

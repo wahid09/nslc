@@ -1,11 +1,5 @@
 @extends('layouts.backend.app')
 @push('css')
-    <style>
-        .flex-wrap {
-            flex-wrap: wrap !important;
-            float: left;
-        }
-    </style>
 @endpush
 
 @section('content')

@@ -103,7 +103,7 @@ Route::post('/socials/{id}', [SocialLinkController::class, 'update'])->name('soc
 
 //User Profile
 Route::get('/userprofile', [UserProfileController::class, 'index'])->name('userprofile.index');
-Route::get('/update-profile', [UserProfileController::class, 'getUpdate'])->name('userprofile.edit');
+Route::get('/update-profile-user', [UserProfileController::class, 'getUpdate'])->name('userprofile.edit');
 Route::post('/update-user-profile', [UserProfileController::class, 'getUpdateData'])->name('userprofile.update');
 
 Route::get('/password-edit', [UserProfileController::class, 'passwordEdit'])->name('password.edit');

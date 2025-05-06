@@ -13,7 +13,8 @@
             </div>
             <div class="page-title-actions">
                 {{--                @permission('club-create')--}}
-                <a href="{{ route('app.member-registration.index') }}" class="btn-shadow mr-3 btn btn-warning" name="button">
+                <a href="{{ route('app.member-registration.index') }}" class="btn-shadow mr-3 btn btn-warning"
+                   name="button">
                     <i class="fas fa-arrow-alt-circle-left"></i>&nbsp;Back to List
                 </a>
                 {{--                @endpermission--}}
@@ -250,8 +251,10 @@
                                             </ul>
                                         </div>
                                         <div class="text-center d-block card-footer">
-                                            <a href="{{route('app.card.front', $member->user_id)}}" class="btn btn-info">Print ID Card-Front</a>
-                                            <a href="{{route('app.card.back', $member->user_id)}}" class="btn btn-info">Print ID Card-Back</a>
+                                            <a href="{{route('app.card.front', $member->user_id)}}"
+                                               class="btn btn-info">Print ID Card-Front</a>
+                                            <a href="{{route('app.card.back', $member->user_id)}}" class="btn btn-info">Print
+                                                ID Card-Back</a>
                                         </div>
                                     </div>
                                 </div>
@@ -571,8 +574,10 @@
                                             </ul>
                                         </div>
                                         <div class="text-center d-block card-footer">
-                                            <a href="{{route('app.card.front', $member->user_id)}}" class="btn btn-info">Print ID Card-Front</a>
-                                            <a href="{{route('app.card.back', $member->user_id)}}" class="btn btn-info">Print ID Card-Back</a>
+                                            <a href="{{route('app.card.front', $member->user_id)}}"
+                                               class="btn btn-info">Print ID Card-Front</a>
+                                            <a href="{{route('app.card.back', $member->user_id)}}" class="btn btn-info">Print
+                                                ID Card-Back</a>
                                         </div>
                                     </div>
                                 </div>
@@ -813,8 +818,10 @@
                                             </ul>
                                         </div>
                                         <div class="text-center d-block card-footer">
-                                            <a href="{{route('app.card.front', $member->user_id)}}" class="btn btn-info">Print ID Card-Front</a>
-                                            <a href="{{route('app.card.back', $member->user_id)}}" class="btn btn-info">Print ID Card-Back</a>
+                                            <a href="{{route('app.card.front', $member->user_id)}}"
+                                               class="btn btn-info">Print ID Card-Front</a>
+                                            <a href="{{route('app.card.back', $member->user_id)}}" class="btn btn-info">Print
+                                                ID Card-Back</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1074,8 +1081,10 @@
                                             </ul>
                                         </div>
                                         <div class="text-center d-block card-footer">
-                                            <a href="{{route('app.card.front', $member->user_id)}}" class="btn btn-info">Print ID Card-Front</a>
-                                            <a href="{{route('app.card.back', $member->user_id)}}" class="btn btn-info">Print ID Card-Back</a>
+                                            <a href="{{route('app.card.front', $member->user_id)}}"
+                                               class="btn btn-info">Print ID Card-Front</a>
+                                            <a href="{{route('app.card.back', $member->user_id)}}" class="btn btn-info">Print
+                                                ID Card-Back</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1317,8 +1326,10 @@
                                             </ul>
                                         </div>
                                         <div class="text-center d-block card-footer">
-                                            <a href="{{route('app.card.front', $member->user_id)}}" class="btn btn-info">Print ID Card-Front</a>
-                                            <a href="{{route('app.card.back', $member->user_id)}}" class="btn btn-info">Print ID Card-Back</a>
+                                            <a href="{{route('app.card.front', $member->user_id)}}"
+                                               class="btn btn-info">Print ID Card-Front</a>
+                                            <a href="{{route('app.card.back', $member->user_id)}}" class="btn btn-info">Print
+                                                ID Card-Back</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1336,7 +1347,8 @@
                                                         @csrf
                                                         <div class="form-group row">
                                                             <label for="password"
-                                                                   class="col-md-4 col-form-label text-lg-right">Signature(300X80), No Background are allow
+                                                                   class="col-md-4 col-form-label text-lg-right">Signature(300X80),
+                                                                No Background are allow
                                                                 </strong></label>
 
                                                             <div class="col-md-6">
